@@ -21,44 +21,45 @@
 </header>
 
 <main>
-<section id="roadmap" aria-label="Roadmap to the platinum">
-  <h2>Roadmap to the Platinum</h2>
-  <p class="section-note">Built from the official trophy descriptions (Exophase · PSNProfiles). Work the stages in order; every trophy below names the stage it belongs to.</p>
-  <ol id="roadmap-list" class="roadmap"></ol>
-</section>
+<div class="controls" id="toolbar">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy or mission name…" autocomplete="off"></label>
+  <label>Kind
+    <select id="kind">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="unearned-only" type="checkbox"> Unearned only</label>
+  <label class="check spoiler"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+</div>
 
 <section id="tracker" aria-label="Trophy tracker">
   <h2>Trophy Tracker</h2>
-  <div class="controls">
-    <label class="search">Search <input id="search" type="search" placeholder="Trophy or mission name…" autocomplete="off"></label>
-    <label>Kind
-      <select id="kind">
-        <option value="all">All kinds</option>
-        <option value="story">Story</option>
-        <option value="missable">Missable</option>
-        <option value="collectibles">Collectibles</option>
-        <option value="activities">Activities</option>
-        <option value="online">Online</option>
-      </select>
-    </label>
-    <label>Grade
-      <select id="grade">
-        <option value="all">All grades</option>
-        <option value="platinum">Platinum</option>
-        <option value="gold">Gold</option>
-        <option value="silver">Silver</option>
-        <option value="bronze">Bronze</option>
-      </select>
-    </label>
-    <label class="check"><input id="unearned-only" type="checkbox"> Unearned only</label>
-    <label class="check spoiler"><input id="spoiler" type="checkbox"> Hide story spoilers</label>
-    <button id="export" type="button">Export progress</button>
-    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
-  </div>
   <p id="spoiler-note" class="spoiler-note" hidden>Spoiler mode on: story trophy names and descriptions stay hidden until you earn them.</p>
   <p id="count-line" class="count-line"></p>
   <div id="cards" class="cards"></div>
   <p id="empty" class="empty" hidden>No trophies match these filters.</p>
+</section>
+
+<section id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="section-note">Built from the official trophy descriptions (Exophase · PSNProfiles). Work the stages in order; every trophy below names the stage it belongs to.</p>
+  <ol id="roadmap-list" class="roadmap"></ol>
 </section>
 
 <section id="missables" aria-label="Missable trophies">
