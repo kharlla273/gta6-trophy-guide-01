@@ -14,6 +14,9 @@
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
+// Slice 1 (2026-11-19): app/ now carries the full guide — all 55 trophies with
+// cited guides, a six-stage roadmap to the platinum, missable flags, kind/grade
+// filters, a spoiler mode, and a tracker that saves, exports and imports progress.
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
